@@ -1,5 +1,5 @@
 <?php
-	
+	header('Content-Type: text/html; charset=utf-8');
 	//Include commonly used variables
 	include('vars.php');
 		
@@ -35,7 +35,7 @@
 <head>
 
     <title><?php echo $site_title; ?></title>
- 
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
     <script language="javascript" type="text/javascript" src="js/submit_form.js"></script>
     <script type="text/javascript">
 		//for submit_form.js
@@ -58,7 +58,7 @@
 	  <a class="sitelogo" href="#" title="Conference Logo"></a>
 	  
 	  <div class="sitename">
-	    <h1 class="pagetitle"><a href="index.html" title="Go to Start page">7th International Conference on the Biology of Butterflies</a></h1>
+	    <h1 class="pagetitle"><a href="../index.html" title="Go to Start page">7th International Conference on the Biology of Butterflies</a></h1>
 	    <h2>August 11-14, 2014 in Turku, Finland</h2>
 	  </div>
       </div>
@@ -68,7 +68,8 @@
       
       <!-- A.3 HEADER BOTTOM -->
       <div class="header-bottom">
-      <!-- Navigation Level 2 (Drop-down menus) -->
+      
+<!-- Navigation Level 2 (Drop-down menus) -->
         <div class="nav2">&nbsp;
         </div>
       </div>
@@ -229,10 +230,16 @@
                     Your count<br /><span id="background_words">0</span> words
                 </span>
             </label>
-            <p>Note: the complete abstract should not exceed <?php echo $total_words_limit; ?> words</p>
+            <p>Note: the complete abstract should not exceed <?php echo $background_words_limit; ?> words</p>
             
             
-     
+            <span id="total_words_remaining" style="color:#009900;">
+		Your Total: 
+		<p>
+		  <span id="words_remaining">0</span> words
+                </p>
+            </span>
+	    
             
            
       

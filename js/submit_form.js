@@ -50,7 +50,7 @@ function check_length(obj) {
         if(arguments[x].words) total += arguments[x].words;
     }
 	document.getElementById(obj.name + countsuffix).firstChild.data = obj.words;
-    document.getElementById(remainingwords).firstChild.data = total;
+	document.getElementById(remainingwords).firstChild.data = total;
 	document.getElementById('word_count').value = total;
 	word_limit = arguments[len-1];
 	if (obj.words > word_limit) {
@@ -93,37 +93,21 @@ function validate(form) {
 	}
 	//Check for background
 	if ( document.abstract_submit_form.background.value == "" ) {
-			alert ( "Please enter the abstract Background" );
+			alert ( "Please enter the abstract" );
 			document.abstract_submit_form.background.focus();
 			return false;
 	}
-	//Check for purpose
-	if ( document.abstract_submit_form.purpose.value == "" ) {
-			alert ( "Please enter the abstract Purpose" );
-			document.abstract_submit_form.purpose.focus();
+	else {
+	  if ( document.abstract_submit_form.background.value.getWordCount() > 300 ) {
+			alert ( "Your abstract is too long. It should not be longer than 300 words" );
+			document.abstract_submit_form.background.focus();
 			return false;
-	}
-	//Check for methods
-	if ( document.abstract_submit_form.methods.value == "" ) {
-			alert ( "Please enter the abstract Methods" );
-			document.abstract_submit_form.methods.focus();
-			return false;
-	}
-	//Check for findings
-	if ( document.abstract_submit_form.findings.value == "" ) {
-			alert ( "Please enter the abstract Findings" );
-			document.abstract_submit_form.findings.focus();
-			return false;
+	  }
 	}
 	
-	//Check for conclusion
-	if ( document.abstract_submit_form.conclusion.value == "" ) {
-			alert ( "Please enter the abstract Conclusion" );
-			document.abstract_submit_form.conclusion.focus();
-			return false;
-	}
 	// Check for e-mail address
 	var emailID=document.abstract_submit_form.email1;
+
 	if ((emailID.value==null)||(emailID.value=="")){
 		alert("Please enter your e-mail address in E-mail #1");
 		emailID.focus();

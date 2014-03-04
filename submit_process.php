@@ -18,52 +18,57 @@
 	
 	mysql_connect($host,$username,$password);
 	@mysql_select_db($database) or die( "Unable to select database");
+	mysql_query("set names utf8");
 	
 	
 	//Capture form fields to variables
 	
-	$title=$_POST['title'];
-	$author1=$_POST['author1'];
-	$organization1=$_POST['organization1'];
-	$author2=$_POST['author2'];
-	$organization2=$_POST['organization2'];
-	$author3=$_POST['author3'];
-	$organization3=$_POST['organization3'];
-	$author4=$_POST['author4'];
-	$organization4=$_POST['organization4'];
-	$author5=$_POST['author5'];
-	$organization5=$_POST['organization5'];
-	$author6=$_POST['author6'];
-	$organization6=$_POST['organization6'];
-	$format=$_POST['format'];
-	$language=$_POST['language'];
-	$presenter=$_POST['presenter'];
-	$background=$_POST['background'];
-	$purpose=$_POST['purpose'];
-	$methods=$_POST['methods'];
-	$findings=$_POST['findings'];
-	$conclusion=$_POST['conclusion'];
-	$word_count=$_POST['word_count'];
-	$name=$_POST['name'];
-	$email1=$_POST['email1'];
-	$email2=$_POST['email2'];
-	$phone1=$_POST['phone1'];
-	$phone2=$_POST['phone2'];
-	$fax=$_POST['fax'];
-	$address=$_POST['address'];
-	$topic=$_POST['topic'];
-	$country=$_POST['country'];
+	$title          = mysql_real_escape_string($_POST['title']);
+	$author1	    = mysql_real_escape_string($_POST['author1']);
+	$organization1	= mysql_real_escape_string($_POST['organization1']);
+	$author2	    = mysql_real_escape_string($_POST['author2']);
+	$organization2	= mysql_real_escape_string($_POST['organization2']);
+	$author3	    = mysql_real_escape_string($_POST['author3']);
+	$organization3	= mysql_real_escape_string($_POST['organization3']);
+	$author4        = mysql_real_escape_string($_POST['author4']);
+	$organization4  = mysql_real_escape_string($_POST['organization4']);
+	$author5        = mysql_real_escape_string($_POST['author5']);
+	$organization5  = mysql_real_escape_string($_POST['organization5']);
+	$author6        = mysql_real_escape_string($_POST['author6']);
+	$organization6  = mysql_real_escape_string($_POST['organization6']);
+	$format         = mysql_real_escape_string($_POST['format']);
+	$language       = mysql_real_escape_string($_POST['language']);
+	$presenter      = mysql_real_escape_string($_POST['presenter']);
+	$background     = mysql_real_escape_string($_POST['background']);
+	$purpose        = mysql_real_escape_string($_POST['purpose']);
+	$methods        = mysql_real_escape_string($_POST['methods']);
+	$findings       = mysql_real_escape_string($_POST['findings']);
+	$conclusion     = mysql_real_escape_string($_POST['conclusion']);
+	$word_count     = mysql_real_escape_string($_POST['word_count']);
+	$name           = mysql_real_escape_string(mysql_real_escape_string($_POST['name']));
+	$email1         = mysql_real_escape_string($_POST['email1']);
+	$email2         = mysql_real_escape_string($_POST['email2']);
+	$phone1         = mysql_real_escape_string($_POST['phone1']);
+	$phone2         = mysql_real_escape_string($_POST['phone2']);
+	$fax            = mysql_real_escape_string($_POST['fax']);
+	$address        = mysql_real_escape_string($_POST['address']);
+	$topic          = mysql_real_escape_string($_POST['topic']);
+	$country        = mysql_real_escape_string($_POST['country']);
 	
 	$date = date("F j, Y, g:i a");
 	
 	
+    $background = str_replace('\r\n', "\n", $background);
+    #print $background;
+    #print "<br>=====================<br>";
+    #print str_replace('\r\n', "\n", $background);
+    #exit(0);
 	
 	
 	//Store into database
 	
 	$query = "INSERT INTO abstracts VALUES ('', '$date', '$title', '$author1', '$organization1', '$author2', '$organization2', '$author3', '$organization3', '$author4', '$organization4', '$author5', '$organization5', '$author6', '$organization6', '$format', '$language', '$presenter', '$background', '$purpose', '$methods', '$findings', '$conclusion', '$word_count', '$name', '$email1', '$email2', '$phone1', '$phone2', '$fax', '$address', '$topic', '$country', 'Unfiled', '', '' )";
-	
-	mysql_query($query) or die(mysql_error()); 
+	mysql_query($query) or die(mysql_error() . " " . $query); 
 		
 	
 	// Grab ID Number
@@ -73,31 +78,6 @@
 	mysql_close();
 	
 	
-	if(get_magic_quotes_gpc()) {
-		$title=stripslashes($title);
-		$author1=stripslashes($author1);
-		$organization1=stripslashes($organization1);
-		$author2=stripslashes($author2);
-		$organization2=stripslashes($organization2);
-		$author3=stripslashes($author3);
-		$organization3=stripslashes($organization3);
-		$author4=stripslashes($author4);
-		$organization4=stripslashes($organization4);
-		$author5=stripslashes($author5);
-		$organization5=stripslashes($organization5);
-		$author6=stripslashes($author6);
-		$organization6=stripslashes($organization6);
-		$presenter=stripslashes($presenter);
-		$background=stripslashes($background);
-		$purpose=stripslashes($purpose);
-		$methods=stripslashes($methods);
-		$findings=stripslashes($findings);
-		$conclusion=stripslashes($conclusion);
-		$name=stripslashes($name);
-		$address=stripslashes($address);
-		$topic=stripslashes($topic);
-		$country=stripslashes($country);
-	}
 	
 		
 	//Send e-mail to recipient
