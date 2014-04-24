@@ -97,6 +97,7 @@
         <form id="abstract_submit_form" name="abstract_submit_form" method="post" action="submit_process.php" 
         class="aform" onsubmit="return validate(this)">
         
+        
             <h3>Abstract Title</h3>
             
             <p>Enter the title of your abstract.</p>
@@ -287,22 +288,39 @@
             <p>Please note that once you click on the button below, your abstract will be submitted and no further 
             changes can be made. We appreciate your interest in this conference.</p>
             
-            <br />
             
-            <input id="submitform" name="submit" type="submit" value="Submit this Abstract" 
+           
+            
+           <div class="captcha">
+            <h3>Are you human?</h3>
+            <p>
+                Sorry to ask. Please type the text shown in the figures:
+            </p>
+       
+          <?php
+	  require_once('recaptchalib.php');
+	  $publickey = "6LeMqvESAAAAADC4ny9xYR8aPnd8A4EUc5hEnmtx"; // you got this from the signup page
+	  echo recaptcha_get_html($publickey);
+	  ?>
+	  
+	  </div>
+
+     <input id="submitform" name="submit" type="submit" value="Submit this Abstract" 
             style="width:250px;height:25px;color:black;" />
-        
-        </form>
-        
+ </form>
+       
         
     	<br /><br />
       </div>
     </div>
     
+ 
+	
+    
   </div>
   
   
-
+ 
 
 	
     

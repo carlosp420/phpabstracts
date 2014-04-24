@@ -24,6 +24,7 @@
 	$custom_topic[7] = "Genetics of adaptation";
 	$custom_topic[8] = "Behavioural ecology";
 	$custom_topic[9] = "General butterfly biology";
+	$custom_topic[10] = "Morning session";
 	
 	
 	//You can have as many or as few of these as you like, but you must have at least one

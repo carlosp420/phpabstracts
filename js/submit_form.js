@@ -123,6 +123,16 @@ function validate(form) {
 		alert("You must check the box agreeing to the terms and conditions.");
 		return false; 
 	}
+
+	// Check for recaptcha
+	var recaptcha=document.abstract_submit_form.recaptcha_response_field;
+
+	if ((recaptcha.value==null)||(recaptcha.value=="")){
+		alert("Are you human? Please type the text shown in the figures");
+		recaptcha.focus();
+		return false;
+	}
+
 	document.getElementById('submitform').disabled = "true";
 	document.getElementById('submitform').value = "Processing...";
 	return true;
