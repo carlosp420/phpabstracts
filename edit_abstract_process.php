@@ -31,6 +31,14 @@
 		$organization5=$_POST['organization5'];
 		$author6=$_POST['author6'];
 		$organization6=$_POST['organization6'];
+		$author7=$_POST['author7'];
+		$organization7=$_POST['organization7'];
+		$author8=$_POST['author8'];
+		$organization8=$_POST['organization8'];
+		$author9=$_POST['author9'];
+		$organization9=$_POST['organization9'];
+		$author10=$_POST['author10'];
+		$organization10=$_POST['organization10'];
 		$format=$_POST['format'];
 		$language=$_POST['language'];
 		$presenter=$_POST['presenter'];
@@ -68,6 +76,10 @@
 				 "author4='$author4', organization4='$organization4', " . 
 				 "author5='$author5', organization5='$organization5', " . 
 				 "author6='$author6', organization6='$organization6', " . 
+				 "author7='$author7', organization7='$organization7', " . 
+				 "author8='$author8', organization8='$organization8', " . 
+				 "author9='$author9', organization9='$organization9', " . 
+				 "author10='$author10', organization10='$organization10', " . 
 				 "format='$format', language='$language', presenter='$presenter', topic='$topic', country='$country', " .
 				 "background='$background', purpose='$purpose', methods='$methods', findings='$findings', conclusion='$conclusion', " . 
 				 "name='$name', email1='$email1', email2='$email2', phone1='$phone1', phone2='$phone2', fax='$fax', address='$address', " .

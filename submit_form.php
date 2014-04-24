@@ -110,7 +110,7 @@
             
             <h3>Author(s)</h3>
             
-            <p>You may enter up to six authors here by clicking on "Add". Enter in format: Family Name, Given Name</p>
+            <p>You may enter up to ten authors here by clicking on "Add". Enter in format: Family Name, Given Name</p>
         
                 <div id="author1" class="conf_form_author">
                     <label for="author1">Author</label>
@@ -168,6 +168,46 @@
                     <br />
                     <label for="organization6">Organisation</label>
                     <input type="text" name="organization6" id="organization6" size="40" />
+                    <br />
+                    <label id="author7add"><a onClick="add_author('author7');" 
+                    style="text-decoration:underline;cursor:hand;cursor:pointer;">Add</a></label>
+                </div> 
+                <div id="author7" class="conf_form_author" style="display:none;visibility:hidden;">
+                    <label for="author7">Author</label>
+                    <input name="author7" type="text" id="author7" size="40" />
+                    <br />
+                    <label for="organization7">Organisation</label>
+                    <input type="text" name="organization7" id="organization7" size="40" />
+                    <br />
+                    <label id="author8add"><a onClick="add_author('author8');" 
+                    style="text-decoration:underline;cursor:hand;cursor:pointer;">Add</a></label>
+                </div> 
+                <div id="author8" class="conf_form_author" style="display:none;visibility:hidden;">
+                    <label for="author8">Author</label>
+                    <input name="author8" type="text" id="author8" size="40" />
+                    <br />
+                    <label for="organization8">Organisation</label>
+                    <input type="text" name="organization8" id="organization8" size="40" />
+                    <br />
+                    <label id="author9add"><a onClick="add_author('author9');" 
+                    style="text-decoration:underline;cursor:hand;cursor:pointer;">Add</a></label>
+                </div> 
+                <div id="author9" class="conf_form_author" style="display:none;visibility:hidden;">
+                    <label for="author9">Author</label>
+                    <input name="author9" type="text" id="author9" size="40" />
+                    <br />
+                    <label for="organization9">Organisation</label>
+                    <input type="text" name="organization9" id="organization9" size="40" />
+                    <br />
+                    <label id="author10add"><a onClick="add_author('author10');" 
+                    style="text-decoration:underline;cursor:hand;cursor:pointer;">Add</a></label>
+                </div> 
+                <div id="author10" class="conf_form_author" style="display:none;visibility:hidden;">
+                    <label for="author10">Author</label>
+                    <input name="author10" type="text" id="author10" size="40" />
+                    <br />
+                    <label for="organization10">Organisation</label>
+                    <input type="text" name="organization10" id="organization10" size="40" />
                 </div> 
            
             <br />

@@ -44,6 +44,14 @@
 		$organization5 = mysql_result($result,$i,"organization5");
 		$author6 = mysql_result($result,$i,"author6");
 		$organization6 = mysql_result($result,$i,"organization6");
+		$author7 = mysql_result($result,$i,"author7");
+		$organization7 = mysql_result($result,$i,"organization7");
+		$author8 = mysql_result($result,$i,"author8");
+		$organization8 = mysql_result($result,$i,"organization8");
+		$author9 = mysql_result($result,$i,"author9");
+		$organization9 = mysql_result($result,$i,"organization9");
+		$author10 = mysql_result($result,$i,"author10");
+		$organization10 = mysql_result($result,$i,"organization10");
 		$format = mysql_result($result,$i,"format");
 		$language = mysql_result($result,$i,"language");
 		$presenter = mysql_result($result,$i,"presenter");
@@ -132,6 +140,14 @@
                                     
                                     <label for "author6">author6</label>
                                         <input type="text" id="author6" name="author6" size="50" value="<?php echo $author6; ?>" /><br />
+                                    <label for "author7">author7</label>
+                                        <input type="text" id="author7" name="author7" size="50" value="<?php echo $author7; ?>" /><br />
+                                    <label for "author8">author8</label>
+                                        <input type="text" id="author8" name="author8" size="50" value="<?php echo $author8; ?>" /><br />
+                                    <label for "author9">author9</label>
+                                        <input type="text" id="author9" name="author9" size="50" value="<?php echo $author9; ?>" /><br />
+                                    <label for "author10">author10</label>
+                                        <input type="text" id="author10" name="author10" size="50" value="<?php echo $author10; ?>" /><br />
                                     
                                     <label for "organization6">organization6</label>
                                         <input type="text" id="organization6" name="organization6" size="50" value="<?php echo $organization6; ?>" /><br />

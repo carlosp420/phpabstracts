@@ -57,6 +57,14 @@
 	$organization5 = mysql_result($result,$i,"organization5");
 	$author6 = mysql_result($result,$i,"author6");
 	$organization6 = mysql_result($result,$i,"organization6");
+	$author7 = mysql_result($result,$i,"author7");
+	$organization7 = mysql_result($result,$i,"organization7");
+	$author8 = mysql_result($result,$i,"author8");
+	$organization8 = mysql_result($result,$i,"organization8");
+	$author9 = mysql_result($result,$i,"author9");
+	$organization9 = mysql_result($result,$i,"organization9");
+	$author10 = mysql_result($result,$i,"author10");
+	$organization10 = mysql_result($result,$i,"organization10");
 	$format = mysql_result($result,$i,"format");
 	$language = mysql_result($result,$i,"language");
 	$presenter = mysql_result($result,$i,"presenter");
@@ -93,6 +101,10 @@
 				if ($author4) echo "<br><br>Author 4: " . $author4 . "<br>Organization 4: " . $organization4;
 				if ($author5) echo "<br><br>Author 5: " . $author5 . "<br>Organization 5: " . $organization5;
 				if ($author6) echo "<br><br>Author 6: " . $author6 . "<br>Organization 6: " . $organization6;
+				if ($author7) echo "<br><br>Author 7: " . $author7 . "<br>Organization 7: " . $organization7;
+				if ($author8) echo "<br><br>Author 8: " . $author8 . "<br>Organization 8: " . $organization8;
+				if ($author9) echo "<br><br>Author 9: " . $author9 . "<br>Organization 9: " . $organization9;
+				if ($author10) echo "<br><br>Author 10: " . $author10 . "<br>Organization 10: " . $organization10;
 			echo "</div>";
 			echo "<div style='width:47%; float:right;'>";
 				echo "Presentation Format: " . $format . "<br>Language: " . $language . "<br>Presenter: " . $presenter;
