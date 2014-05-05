@@ -8,57 +8,11 @@
  *
 *********************************************************/
 
-
-
 	//Include header template
 	include('header.php');
 	
 	//Only ADMINs can view this page
 	if ($admin) {
-		
-		//Capture form fields to variables
-		$abstract_id = $_POST['abstract_id'];
-		$title=$_POST['title'];
-		$author1=$_POST['author1'];
-		$organization1=$_POST['organization1'];
-		$author2=$_POST['author2'];
-		$organization2=$_POST['organization2'];
-		$author3=$_POST['author3'];
-		$organization3=$_POST['organization3'];
-		$author4=$_POST['author4'];
-		$organization4=$_POST['organization4'];
-		$author5=$_POST['author5'];
-		$organization5=$_POST['organization5'];
-		$author6=$_POST['author6'];
-		$organization6=$_POST['organization6'];
-		$author7=$_POST['author7'];
-		$organization7=$_POST['organization7'];
-		$author8=$_POST['author8'];
-		$organization8=$_POST['organization8'];
-		$author9=$_POST['author9'];
-		$organization9=$_POST['organization9'];
-		$author10=$_POST['author10'];
-		$organization10=$_POST['organization10'];
-		$format=$_POST['format'];
-		$language=$_POST['language'];
-		$presenter=$_POST['presenter'];
-		$topic=$_POST['topic'];
-		$country=$_POST['country'];
-		$background=$_POST['background'];
-		$purpose=$_POST['purpose'];
-		$methods=$_POST['methods'];
-		$findings=$_POST['findings'];
-		$conclusion=$_POST['conclusion'];
-		$name=$_POST['name'];
-		$email1=$_POST['email1'];
-		$email2=$_POST['email2'];
-		$phone1=$_POST['phone1'];
-		$phone2=$_POST['phone2'];
-		$fax=$_POST['fax'];
-		$address=$_POST['address'];
-		
-		$last_edit = date("F j, Y, g:i a");
-		
 		
 		//Database Connection Variables
 		include('db.php');
@@ -66,6 +20,51 @@
 		//Connect to database
 		mysql_connect($host,$username,$password);
 		@mysql_select_db($database) or die( "Unable to select database");
+
+		//Capture form fields to variables
+		$abstract_id = $_POST['abstract_id'];
+		$title = mysql_real_escape_string($_POST['title']);
+		$author1 = mysql_real_escape_string($_POST['author1']);
+		$organization1 = mysql_real_escape_string($_POST['organization1']);
+		$author2 = mysql_real_escape_string($_POST['author2']);
+		$organization2 = mysql_real_escape_string($_POST['organization2']);
+		$author3 = mysql_real_escape_string($_POST['author3']);
+		$organization3 = mysql_real_escape_string($_POST['organization3']);
+		$author4 = mysql_real_escape_string($_POST['author4']);
+		$organization4 = mysql_real_escape_string($_POST['organization4']);
+		$author5 = mysql_real_escape_string($_POST['author5']);
+		$organization5 = mysql_real_escape_string($_POST['organization5']);
+		$author6 = mysql_real_escape_string($_POST['author6']);
+		$organization6 = mysql_real_escape_string($_POST['organization6']);
+		$author7 = mysql_real_escape_string($_POST['author7']);
+		$organization7 = mysql_real_escape_string($_POST['organization7']);
+		$author8 = mysql_real_escape_string($_POST['author8']);
+		$organization8 = mysql_real_escape_string($_POST['organization8']);
+		$author9 = mysql_real_escape_string($_POST['author9']);
+		$organization9 = mysql_real_escape_string($_POST['organization9']);
+		$author10 = mysql_real_escape_string($_POST['author10']);
+		$organization10 = mysql_real_escape_string($_POST['organization10']);
+		$format = mysql_real_escape_string($_POST['format']);
+		$language = mysql_real_escape_string($_POST['language']);
+		$presenter = mysql_real_escape_string($_POST['presenter']);
+		$topic = mysql_real_escape_string($_POST['topic']);
+		$country = mysql_real_escape_string($_POST['country']);
+		$background = mysql_real_escape_string($_POST['background']);
+		$purpose = mysql_real_escape_string($_POST['purpose']);
+		$methods = mysql_real_escape_string($_POST['methods']);
+		$findings = mysql_real_escape_string($_POST['findings']);
+		$conclusion = mysql_real_escape_string($_POST['conclusion']);
+		$name = mysql_real_escape_string($_POST['name']);
+		$email1 = mysql_real_escape_string($_POST['email1']);
+		$email2 = mysql_real_escape_string($_POST['email2']);
+		$phone1 = mysql_real_escape_string($_POST['phone1']);
+		$phone2 = mysql_real_escape_string($_POST['phone2']);
+		$fax = mysql_real_escape_string($_POST['fax']);
+		$address = mysql_real_escape_string($_POST['address']);
+		
+		$last_edit = date("F j, Y, g:i a");
+		
+		
 		
 		//Update details for this user
 		$query = "UPDATE abstracts SET " . 
@@ -104,6 +103,5 @@
 			 
 	//Include footer template
 	include('footer.php'); 
-
 
 ?>

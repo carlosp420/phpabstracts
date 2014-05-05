@@ -158,14 +158,6 @@
 			
 			echo "<input type='hidden' id='abstract_id' name='abstract_id' value='" . $abstract_id . "' />";
 			
-			echo "<input type='radio' name='master_status' value='Poster'";
-				 if ($master_status == "Poster") echo " checked ";
-			  	 echo "onclick='javascript:show(\"scholarshipdiv\");' ";
-				 echo "/>Poster<br />";	
-			echo "<input type='radio' name='master_status' value='Panel'";
-				 if ($master_status == "Panel") echo " checked ";
-				 echo "onclick='javascript:show(\"scholarshipdiv\");' ";
-			  	 echo "/>Panel<br />";
 			echo "<input type='radio' name='master_status' value='Roundtable'";
 				 if ($master_status == "Roundtable") echo " checked ";
 				 echo "onclick='javascript:show(\"scholarshipdiv\");' ";

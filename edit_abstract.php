@@ -161,6 +161,7 @@
 								
                                 <label for="format">Preferred Format</label>
 							  		<select id="format" name="format">
+                                        <option value="Oral" <?php if ($format == "Oral") echo "selected"; ?>>Oral</option>
                                         <option value="Poster" <?php if ($format == "Poster") echo "selected"; ?>>Poster</option>
                                         <option value="Panel" <?php if ($format == "Panel") echo "selected"; ?>>Panel</option>
                                     </select>
